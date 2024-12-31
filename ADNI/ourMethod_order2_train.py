@@ -352,13 +352,13 @@ def train(opt):
             pred_gen = torch.softmax(C_net(generated_feature_3_by_12), dim=1)
             pred_average = (pred_gen + pred) / 2
 
-            pred = torch.softmax(pred, dim=1).detach().cpu().numpy()
+            pred = pred.detach().cpu().numpy()
             pred_all.extend(pred)
 
-            pred_gen = torch.softmax(pred_gen, dim=1).detach().cpu().numpy()
+            pred_gen = pred_gen.detach().cpu().numpy()
             pred_gen_all.extend(pred_gen)
 
-            pred_average = torch.softmax(pred_average, dim=1).detach().cpu().numpy()
+            pred_average = pred_average.detach().cpu().numpy()
             pred_average_all.extend(pred_average)
 
             label_T = label_T.cpu().numpy()
