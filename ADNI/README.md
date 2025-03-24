@@ -28,6 +28,6 @@ ADNI/
 python ourMethod_order1_train.py
 ```
 ## Train with your own dataset
-1. Preprocess AD data with your own method and convert it to npy format.
+1. Preprocess AD data with your own method and convert it into npy format.
 2. Create your own .xls file follow our method in /data/ directory.
 3. Our method will first downsample the metadata from 181\*217\*181 to 128\*128\*128 in size. If you want to use data of other sizes, please retrain the pre-trained extractor and modify the code of the generator and discriminator.
